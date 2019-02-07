@@ -1,5 +1,7 @@
 import React, { useState, Fragment } from "react";
 
+import Todo from "./Todo.js";
+
 function App() {
   const [todos, setTodos] = useState([
     { text: "Learn about react" },
