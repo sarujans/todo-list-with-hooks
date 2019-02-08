@@ -12,7 +12,7 @@ const TodoForm = function({ addTodo }) {
 
   return (
     <>
-      <form onSubmit="{handleSubmit}">
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           className="input"
