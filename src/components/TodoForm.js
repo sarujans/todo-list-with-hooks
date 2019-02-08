@@ -17,7 +17,7 @@ const TodoForm = function({ addTodo }) {
           type="text"
           className="input"
           value={value}
-          onchange={e => setValue(e.target.value)}
+          onChange={e => setValue(e.target.value)}
         />
       </form>
     </>
