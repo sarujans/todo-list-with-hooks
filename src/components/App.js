@@ -1,6 +1,6 @@
 import React, { useState, Fragment } from "react";
 
-import Todo from "./Todo.js";
+import TodoForm from "./TodoForm.js";
 
 function App() {
   const [todos, setTodos] = useState([
@@ -12,6 +12,7 @@ function App() {
   return (
     <>
       <h1>Todo-list</h1>
+      <TodoForm />
     </>
   );
 }
