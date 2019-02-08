@@ -1,5 +1,6 @@
 import React, { useState, Fragment } from "react";
 
+import Todo from "./Todo.js";
 import TodoForm from "./TodoForm.js";
 
 function App() {
@@ -9,10 +10,21 @@ function App() {
     { text: "Learn about ht" }
   ]);
 
+  const addTodo = text => {
+    const newTodos = [...todos, { text }];
+    setTodos(newTodos);
+  };
+
   return (
     <>
-      <h1>Todo-list</h1>
-      <TodoForm />
+      <div className="app">
+        <div className="todo-list">
+          {todos.map((todo, index) => (
+            <Todo key={index} index={index} todo={todo} />
+          ))}
+        </div>
+        <TodoForm addTodo={addTodo} />
+      </div>
     </>
   );
 }
